@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-import './List.css';
+import '../cssFiles/List.css'; 
+import homeimg from '../logo/home.png'
 
 function List() {
   const [movies, setMovies] = useState([]);
@@ -88,16 +89,21 @@ function List() {
 
   return (
     <div className="movie-list">
-      <div className="search-container">
-        <div className="search-bar">
-          <input
-            type="text"
-            value={searchQuery}
-            onChange={(event) => setSearchQuery(event.target.value)}
-            placeholder="Search"
-            className="search-input"
-          />
+      <div className='movie-head'>
+        <div className="search-container">
+          <div className="search-bar">
+            <input
+              type="text"
+              value={searchQuery}
+              onChange={(event) => setSearchQuery(event.target.value)}
+              placeholder="Search"
+              className="search-input"
+            />
+          </div>
         </div>
+        <Link to="/" className="back-button">
+          <img src={homeimg} alt="Back to List" className="back-button-image" />
+        </Link>
       </div>
       <div className="movie-grid">
         {movies.map((movie, index) => (

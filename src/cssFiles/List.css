@@ -1,10 +1,10 @@
-/* Movie tiles container */
+
 
 h2{
     flex: 70;
-    color: grey; /* Set font color to grey for left container */
-    display: flex; /* Add flex display to align text */
-    justify-content: flex-start; /* Align text to the left */
+    color: grey; 
+    display: flex; 
+    justify-content: flex-start; 
     align-items: center;
 }
 
@@ -22,8 +22,46 @@ a {
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 20px;
   }
+
+  .movie-head {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 10px 20px; 
+    background-color: #f5f5f5;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  }
   
-  /* Individual movie tile */
+  .search-container {
+    flex-grow: 5; 
+    display: flex;
+    align-items: center;
+  }
+  
+  .search-input {
+    width: 50rem;
+    padding: 15px 15px 15px 40px; 
+    border-radius: 0.5rem;
+    border-color: lightgrey;
+    background-color: lightgray;
+    background-image: url('../logo/search.png'); 
+    background-repeat: no-repeat;
+    background-position: left 15px center;
+    background-size: 20px;
+    margin-right: 20px;
+    font-size: larger;
+    font-weight: 100;
+  }
+  
+  .back-button {
+    display: inline-block;
+  }
+  
+  .back-button-image {
+    width: 30px; 
+    height: 30px;
+  }
+
   .movie-tile {
     border: 1px solid #ddd;
     height: 12cm;
@@ -32,13 +70,13 @@ a {
     flex-direction: column;
     align-items: center;
     border-radius: 1rem;
-    box-shadow: 1px 5px grey;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
   }
   
-  /* Movie poster image */
+
   .movie-tile img {
-    width: 100%;/* Adjust the width as needed */
-    object-fit: cover; /* Maintain aspect ratio and cover the entire space */
+    width: 100%;
+    object-fit: cover; 
     margin-bottom: 10px;
     border-radius: 0.5rem;
   }
@@ -75,20 +113,9 @@ a {
     color: grey;
 }
 
-  input {
-    float: none;
-    display: block;
-    text-align: left;
-    width: 50%;
-    border-radius: 0.5rem;
-    margin: 10px;
-    padding: 15px;
-    background-color:lightgray;
-    box-shadow: 1px 5px grey;
-    
-  }
+
   
+
   
-  
-  /* Styling for the search container, input, and button can be added here as well */
+
   
