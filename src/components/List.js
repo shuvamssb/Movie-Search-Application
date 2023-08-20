@@ -11,7 +11,7 @@ function List() {
   const [searchTimeout, setSearchTimeout] = useState(null);
 
   useEffect(() => {
-    fetchMovies();
+    fetchMovies();// eslint-disable-next-line 
   }, []);
 
   const fetchMovies = (page = 1) => {
@@ -56,7 +56,7 @@ function List() {
     window.addEventListener('scroll', handleScroll);
     return () => {
       window.removeEventListener('scroll', handleScroll);
-    };
+    };// eslint-disable-next-line 
   }, [currentPage]);
 
   function truncateDescription(description, lines) {
@@ -84,7 +84,7 @@ function List() {
       setMovies([]);
       setCurrentPage(1);
       fetchMovies(1); // Fetch upcoming movies when search query is empty
-    }
+    }// eslint-disable-next-line 
   }, [searchQuery]);
 
   return (

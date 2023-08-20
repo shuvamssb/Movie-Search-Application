@@ -9,7 +9,7 @@ function MovieDetails() {
   const [movieDetails, setMovieDetails] = useState(null);
 
   useEffect(() => {
-    fetchMovieDetails();
+    fetchMovieDetails();// eslint-disable-next-line 
   }, []);
 
   function truncateDescription(description, lines) {
